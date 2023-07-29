@@ -19,3 +19,16 @@ git-switch はブランチ切り替えのみを行うコマンドとして作成
 - https://tracpath.com/docs/git-switch/
 - https://qiita.com/RINYU_DRVO/items/958e0723178f88da8101
 - https://snowsystem.net/git/git-command/git-switch/
+
+# git-restore
+
+git-checkoutの代わりにファイルを復元することができる
+`--staged` or `-S` が指定された場合には、HEADから復元される。それ以外の場合にはindexから復元される
+別のcommitから復元するためには、 `--source` or `-s` を使用する
+
+**ただし、このコマンド自体はまだ実験的な機能なので新しいバージョンでは変更がある可能性あり**
+
+## references
+
+- https://tracpath.com/docs/git-restore/
+- https://www.r-staffing.co.jp/engineer/entry/20200131_1
