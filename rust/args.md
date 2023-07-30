@@ -1,0 +1,27 @@
+# コマンドラインオプション解析
+
+`std::env` モジュールの `args` 関数を使用することによって、コマンドライン引数を取得することができます。
+
+```rust
+use std::env;
+
+fn main() {
+  let program: String = env::args().next().unwrap();
+  let args: Vec<String> = env::args().skip(1).collect();
+}
+```
+
+# 引数がない場合にエラーを返す方法
+
+`std::env::args` 関数は、引数を受け取っていない場合、Noneが返るのでそれをパターンマッチで受け取ってpanic!させる
+
+```rust
+use std::env;
+
+fn main() {
+  match env::args().nth(1) {
+    Some(arg) => println!("{}", arg),
+    None => panic!("引数がありません"),
+  }
+}
+```
