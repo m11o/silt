@@ -29,3 +29,39 @@ fn main() {
 ## references
 
 https://qiita.com/tatsuya6502/items/cd41599291e2e5f38a4a
+
+# .envファイルから環境変数を読み込む
+
+## dotenvクレートを使用する
+
+github: https://github.com/dotenv-rs/dotenv
+
+使い方
+
+1. dotenv.ok()を使用して、std::env::varから値を取得する
+
+```text:.env
+DATABASE_URL=postgres://root:root@localhost/rust-dev
+```
+
+```rust
+use std::env;
+use dotenv::dotenv;
+
+fn main() {
+  dotenv().ok();
+  
+  let database_url = env::var("DATABASE_URL").unwrap();
+}
+```
+
+2. keyを指定して値を取得する
+
+```rust
+use dotenv;
+
+fn main() {
+  let key = "FOO"
+  let value = dotenv::var(key).unwrap();
+}
+```
