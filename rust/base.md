@@ -84,6 +84,12 @@ client.exec() // OK
 async-trait crateを使用することで実現することができる
 ref: https://crates.io/crates/async-trait
 
+# Why async fn in trait is hard?
+
+https://smallcultfollowing.com/babysteps/blog/2019/10/26/async-fn-in-traits-are-hard/
+面白そう
+後で読む
+
 # traitの実装順番が指定されるのはなぜか
 
 ```rust
