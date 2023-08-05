@@ -56,3 +56,33 @@ impl Summary for Tweet {
     }
 }
 ```
+
+# traitで定義されたメソッドはtraitを読み込んだscope内でしか実行できない
+
+```rust
+trait Client {
+  fn exec();
+}
+
+// 別ファイル(NG)
+struct HogeClient {}
+
+client = HogeClient {}
+client.exec() // error
+
+// 別ファイル(OK)
+struct HogeClient {}
+
+use crate::client::Client
+
+client = HogeClient {}
+client.exec() // OK
+```
+
+# traitの実装順番が指定されるのはなぜか
+
+```rust
+Different impl member order from the trait
+```
+
+みたいなwarningが出てくる
