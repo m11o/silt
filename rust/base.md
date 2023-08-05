@@ -79,6 +79,11 @@ client = HogeClient {}
 client.exec() // OK
 ```
 
+# traitではasync/awaitを使用できない(Supportされていない)
+
+async-trait crateを使用することで実現することができる
+ref: https://crates.io/crates/async-trait
+
 # traitの実装順番が指定されるのはなぜか
 
 ```rust
