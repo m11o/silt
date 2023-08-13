@@ -1,2 +1,8 @@
 .idea
 /notes/secret/**/*
+
+
+# Added by cargo
+
+/target
+/Cargo.lock
