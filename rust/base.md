@@ -109,3 +109,8 @@ match x {
   _ => println!("anything"),
 }
 ```
+
+# AsRef = trait
+
+traitでした
+AsRef traitを実装していると、as_refメソッドを使用することができる
