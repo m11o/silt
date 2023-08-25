@@ -1,6 +1,5 @@
 use chrono::{Datelike, NaiveDate};
 use std::fs;
-use std::path::PathBuf;
 use project_root::get_project_root;
 
 pub struct DairyManager<'a> {
