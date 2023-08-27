@@ -1,6 +1,6 @@
 use chrono::{Datelike, NaiveDate};
 use std::fs;
-use project_root::get_project_root;
+use std::env;
 
 pub struct DairyManager<'a> {
     date: &'a NaiveDate,
@@ -19,15 +19,11 @@ impl<'a> DairyManager<'a> {
     }
 
     fn _build_file_path(date: &'a NaiveDate) -> String {
-        format!("{}/notes/dairy/{}/{:0>2}.md", Self::project_root_path(), date.year(), date.month())
+        format!("{}/{:0>2}.md", Self::_build_file_dir(date), date.month())
     }
 
     fn _build_file_dir(date: &'a NaiveDate) -> String {
-        format!("{}/notes/dairy/{}", Self::project_root_path(), date.year())
-    }
-
-    fn project_root_path() -> String {
-        get_project_root().expect("Failed to get project root.").to_str().unwrap().to_string()
+        format!("{}/notes/dairy/{}", env::var("SILT_PROJECT_ROOT_PATH").expect("Failed to load project root path from env"), date.year())
     }
 }
 
