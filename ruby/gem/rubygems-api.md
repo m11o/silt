@@ -2,6 +2,7 @@
 
 APIがあるみたい
 https://guides.rubygems.org/rubygems-org-api-v2/
+これはV2っぽい
 
 ```shell
 curl https://rubygems.org/api/v2/rubygems/rails/versions/7.0.8.json
@@ -110,3 +111,8 @@ curl https://rubygems.org/api/v2/rubygems/rails/versions/7.0.8.json
   "spec_sha": null
 }
 ```
+
+V1なら色々できそう
+でもラベルみたいな情報はそもそも取れなさそう
+
+ref: https://guides.rubygems.org/rubygems-org-api/
