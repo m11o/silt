@@ -73,3 +73,40 @@ class Regexp
   end
 end
 ```
+
+
+```ruby
+# Write Ruby code to test the RBS.
+# It is type checked by `steep check` command.
+
+require "regexp_parser"
+
+regex = /a?(b+(c)d)*(?<name>[0-9]+)/i
+Regexp::Parser.parse(regex, 'ruby/2.1') do |token|
+  puts token.inspect
+end
+Regexp::Parser.parse(
+  'a+ # Recognizes a and A...',
+  options: ::Regexp::EXTENDED | ::Regexp::IGNORECASE
+)
+```
+
+```ruby.rbs
+class Regexp::Parser
+  def parse: (Regexp | String input, ?String? syntax, ?options: Integer?) { (Regexp::Expression::Root) -> untyped } -> untyped
+           | (Regexp | String input, ?String? syntax, ?options: Integer?) -> Regexp::Expression::Root
+  def self.parse: (Regexp | String input, ?String? syntax, ?options: Integer?) { (Regexp::Expression::Root) -> untyped } -> untyped
+                | (Regexp | String input, ?String? syntax, ?options: Integer?) -> Regexp::Expression::Root
+end
+
+module Regexp::Expression
+  class Root < Subexpression
+  end
+
+  class Subexpression < Base
+  end
+
+  class Base
+  end
+end
+```
