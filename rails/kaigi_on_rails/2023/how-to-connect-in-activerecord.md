@@ -1,3 +1,6 @@
+見つけた方、ブレイクポイントを仕込んで、SQLを実行した時のbacktraceを確認する
+-> rdbg
+
 # activerecord
 
 ## motivattion
