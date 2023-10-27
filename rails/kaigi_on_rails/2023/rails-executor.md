@@ -38,5 +38,7 @@ end
 ```
 
 rails worldでアーキテクチャを説明したslideがある
+-> これは読む価値がありそう
+
 github: envek
 github: evilmartian
