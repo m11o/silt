@@ -1,0 +1,7 @@
+# ActiveSupport::CurrentAttributes
+
+global変数の定義方法
+unicornはリクエストごとにメモリが独立
+pumaはスレッドで動いているので、独立しておらず、Thread.currentなどが危ない
+
+current_attributesが漏洩してことがあった
