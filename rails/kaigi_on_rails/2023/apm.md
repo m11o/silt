@@ -15,3 +15,4 @@ rubyはspanがでないので、手動でspanが登録できるようにする
 DDtrace::tracing.trace
 
 apm tracable gem
+push通知のプレビュー画面にあると良さそう
