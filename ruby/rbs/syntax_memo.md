@@ -8,3 +8,8 @@ ref: https://github.com/ruby/gem_rbs_collection/compare/main...m11o:feature/add-
 ? String ?
 前方の `?` はoptionalという意味
 後方の `?` はnilの可能性があるということ
+
+# interned
+
+String | Symbol みたいな型は `interned` を使用する
+Object::nameを使用している箇所がgem_rbs_collection内にありそうなので、リリース後に修正する
