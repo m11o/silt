@@ -24,3 +24,5 @@ end
 ```
 
 second parameterに、Rails.envなどのどの環境かを渡すこともできる
+
+TODO: ActiveSupport::OrderedOptionsに依存しているので、reviewで通った後にこのメソッドにも型を追加する
