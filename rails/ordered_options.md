@@ -21,3 +21,5 @@ h = ActiveSupport::InheritableOptions.new({ girl: 'Mary', boy: 'John' })
 h.girl # => 'Mary'
 h.boy  # => 'John'
 ```
+
+TODO: rails7からdigメソッドが増えているので、PRがmergeされ次第修正
