@@ -1,0 +1,5 @@
+# activestorageはyarnに依存している
+
+activestorageはyarnに依存していることを知った
+どこで使われているか調べる必要がありそう
+ref: https://github.com/rails/rails/blob/a6099ed2b7a544d8fe67688e8a0f9237847404ee/guides/source/development_dependencies_install.md#install-additional-tools-and-services
