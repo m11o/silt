@@ -170,4 +170,102 @@ maxUnavailable: 自動更新中に常時利用できないインスタンスの�
 
 ref: https://tech.quickguard.jp/posts/gke-autoscale-overview/
 
+# KubernetesのPod
 
+実行可能な最小単位
+でもPodは必ずNode内で実行されるので、１つのpodが最小構成なら1つのnodeも最小構成のはず
+
+# Cloud Functionのランタイム
+
+- Node.js
+- Python
+- Go
+- Java
+- .NET
+- Ruby
+- PHP
+
+# Cloud Spanner v.s Cloud SQL
+
+Spannerは水平スケールが可能
+SQLは垂直スケールのみ
+
+# VPC network peering
+
+VPCネットワーク間での通信を可能にする
+Each VPN endpoint supports up to 3 Gbps, so two will be sufficient.
+（それぞれのVPNエンドポイントごとに3 Gbps サポートしている）
+なので、5Gbpsの通信を行うには、2つのVPNエンドポイントが必要
+
+ref: https://cloud.google.com/vpc/docs/vpc-peering?hl=ja
+
+## その他の接続方法
+
+- Cloud VPN
+  - オンプレミスとの接続
+  - 暗号化されていない情報に対してデータセンターをクラウドに拡張
+- Cloud DNS
+  - ドメインとの接続 
+- Cloud Interconnect
+  - オンプレミスとの接続
+- Hybrid Connectivity
+  - オンプレミスとの接続
+
+# Cloud Armor
+
+DDoS攻撃などからアプリケーションを保護するためのサービス
+クロスサイト スクリプティング（XSS）、SQL インジェクション（SQLi）も
+
+アプリケーションを保護というよりは、デプロイを保護する
+
+ref: https://cloud.google.com/armor/docs/cloud-armor-overview
+
+# Compute Engineの状態ごとの料金
+
+- Stopped
+  - ディスクのみ課金
+- running
+  - ディスクとCPU, memoryの課金
+
+# Cloud Datastore
+
+プロパティは複数の型の値を持つことができるため、同じプロパティであってもエンティティによって値の型が異なる場合があります
+数値 ID を自動生成したりする代わりに、作成したエンティティに独自の数値 ID を手動で割り当てることができます
+  -> 競合を回避する唯一の方法は、allocateIds() メソッドを使ってアプリケーションで ID のブロックを取得すること
+
+# 管理可能な観点で管理できる範囲が広い順
+
+IaaS > CasS > PaaS > FaaS > SssS
+
+# Bigtable
+
+- key/value store
+- 各テーブルにインデックスは１つのみ
+- 行は、行キーの（最小バイト文字列から最大バイト文字列まで）辞書順に並べ替えられます
+- すべてのオペレーションは行レベルでアトミックに実行
+
+# Dataflow
+
+- データ処理のためのサービス
+- データのバッチ処理とストリーミング処理の両方をサポート
+- データ ストリーミングと機械学習によるリアルタイムの分析情報と有効活用
+
+# Cloud Storage Lifecycle
+
+lifecycleを設定することによって、一定期間経ったstorageのstorageクラスを変更したりできる
+
+# Cloud SpannerのID指定方法
+
+キーが単調増加、単調現象する場合には、ホットスポットになりやすい
+Timestampをprimary keyとして使用することもhotspotになりやすい
+
+# Cloud Pub/Sub v.s Cloud Task
+
+大きな違いは呼び出しについて
+pub/subは、暗黙的呼び出し
+taskは、明示的呼び出し
+
+どちらもwebhookからのpushを受け取ることができ、実行を遅らせることができる
+ただし、明示的な実行か、暗黙的な呼び出しかの違いがある
+
+ref: https://cloud.google.com/pubsub/docs/choosing-pubsub-or-cloud-tasks?hl=ja
