@@ -336,3 +336,35 @@ ref: https://cloud.google.com/products/calculator
 
 Compute Engine の余剰の容量を利用する機能であり、使用できるかどうかは利用状況に応じて変わります。
 標準 VM の料金よりもはるかに低価格
+
+# GKE PersistentVolume
+
+クラスタ内の耐久性に優れたストレージの管理に使用
+ノードの再起動やPodの再起動によってもデータが保持される
+-> Podとは独立して存在するクラスタ
+
+## ReplicaSet
+
+Podがどんな時も指定した数のpodが稼働することを保証する
+
+## Deployment
+
+ReplicaSetを管理するためのリソース
+ReplicaSetの上位概念
+
+## StatefulSet
+
+StatefulSetはステートフルなアプリケーションを管理するためのワークロードAPI
+DeploymentとPodのセットのスケーリングを管理し、それらのPodの順序と一意性を保証
+
+## DaemonSet
+
+全て(またはいくつか)のNodeが単一のPodのコピーを稼働させることを保証
+
+- Nodeがクラスターに追加されるとき、PodがNode上に追加されます。
+- Nodeがクラスターから削除されたとき、それらのPodはガーベージコレクターにより除去
+
+# Cloud run の最大コンテナ数
+
+デフォルト設定の最大コンテナ数は、100個
+ref: https://cloud.google.com/run/docs/configuring/max-instances?hl=ja#setting
