@@ -368,7 +368,3 @@ DeploymentとPodのセットのスケーリングを管理し、それらのPod�
 
 デフォルト設定の最大コンテナ数は、100個
 ref: https://cloud.google.com/run/docs/configuring/max-instances?hl=ja#setting
-
-# test
-
-これはsquashテストです
