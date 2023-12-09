@@ -12,3 +12,9 @@ gem 'ruby-debug-ide'
 ```bash
 bundle update --conservative io-wait
 ```
+
+
+```ruby
+  gem 'ruby-debug-ide', require: false
+  gem 'io-wait', '~> 0.3.0', require: false
+```
