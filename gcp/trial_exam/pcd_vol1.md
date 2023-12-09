@@ -175,6 +175,11 @@ ref: https://tech.quickguard.jp/posts/gke-autoscale-overview/
 実行可能な最小単位
 でもPodは必ずNode内で実行されるので、１つのpodが最小構成なら1つのnodeも最小構成のはず
 
+# Cloud CDNのdefault TTL
+
+デフォルト: 1時間
+最大: 1年
+
 # Cloud Functionのランタイム
 
 - Node.js
@@ -189,6 +194,19 @@ ref: https://tech.quickguard.jp/posts/gke-autoscale-overview/
 
 Spannerは水平スケールが可能
 SQLは垂直スケールのみ
+
+# k8sのnodeの数を増やす方法
+
+gcloud コマンドを使用するらしい
+以下参照: https://cloud.google.com/kubernetes-engine/docs/how-to/resizing-a-cluster
+
+# AIのpre-trained modelにアクセスする方法
+
+- cloud client libraries
+- REST API
+
+でアクセスできるみたい
+参照: https://cloud.google.com/products/ai
 
 # VPC network peering
 
