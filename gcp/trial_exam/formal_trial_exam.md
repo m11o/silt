@@ -33,6 +33,13 @@ Pod（コンテナ）と通信を維持するためのポリシーなどを定�
 外部のロードバランサーの役割(実態はCloud Load Balancer)
 外部からのアクセスを受け付ける
 
+External HTTPS Load Balancer に複数のホスト名用の SSl/TLS 証明書を 設定する方法
+
+- Google マネージド SSL 証明書。使用方法については、マネージド証明書のページをご覧ください。
+- ご自身で管理している Google Cloud SSL 証明書。以前に Google Cloud プロジェクトにアップロードされた事前共有証明書を使用します。
+- Kubernetes Secrets。Secret では、ご自身で作成した証明書と鍵が保持されます。Secret を使用するには、その名前を Ingress マニフェストの tls フィールドに追加します。
+
+
 ## ReplicaSet
 
 Podがいくつ起動させるかを定義するもの
