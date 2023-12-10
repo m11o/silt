@@ -208,3 +208,37 @@ Cloud Error Reportingはstderrのログを収集する
 
 Cloud Spannerは可能
 Cloud SQLは単一のリージョンのみの整合性のみサポート
+
+# サービスアカウント
+
+サービスに割り当てられるアカウント
+Googleアカウントは人に割り当てる
+
+ref: https://cloud.google.com/iam/docs/service-account-overview?hl=ja
+
+# Google アカウント
+
+Cloud Identity によって管理される
+
+# IAMロール
+
+権限をまとめたもの
+
+基本ロール
+  - オーナー
+  - 編集者
+  - 閲覧者
+事前定義ロール
+カスタムロール
+
+# ポリシー
+
+メンバーとロールを紐づけることをバインディング
+このバインディングをまとめたものをポリシーという
+
+# Cloud IAP
+
+Identity-Aware Proxy
+アプリケーションに対して認証を行うプロキシサーバー(フルマネジド)
+
+ref: https://blog.g-gen.co.jp/entry/login-your-vm-with-iap
