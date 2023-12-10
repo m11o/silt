@@ -148,6 +148,8 @@ Cloud Runでは、標準出力と標準エラー出力のログを出力する�
 # Serverless VPC Access
 
 Cloud Run や Cloud Functions, App Engine から VPC 内のリソースにアクセスするための機能
+コネクタとそれを利用するサーバーレスは同じリージョンに存在する必要がある
+  - 接続したい VPC リソースとコネクタが同じリージョンである必要は無い
 
 ref: https://cloud.google.com/vpc/images/serverless-vpc-access.svg
 
