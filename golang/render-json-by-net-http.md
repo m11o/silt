@@ -49,3 +49,7 @@ func main() {
     json.NewEncoder(f).Encode(u) // user.jsonに書き込まれる
 }
 ```
+
+## references
+
+- https://zenn.dev/hsaki/articles/go-convert-json-struct
