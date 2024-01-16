@@ -36,3 +36,15 @@ func main() {
     fmt.Println(a) // {{1 foo} admin}
 }
 ```
+
+ref: https://www.geeksforgeeks.org/inheritance-in-golang/
+
+## パターン
+
+- 構造体に構造体を埋め込む
+- インターフェースにインタフェースを埋め込む
+- 構造体にインターフェースを埋め込む
+  - 構造体によるインターフェースの実装も当てはまるみたい。
+- 委譲のネスト
+
+ref: https://qiita.com/gold-kou/items/514aeeba16b59284bbf6
