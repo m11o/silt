@@ -23,3 +23,6 @@ git branch --format="%(refname:short)" | grep -vE "^(master|main|develop)$" | xa
 1. git branch --format="%(refname:short)"でbranch名を取得
    - formatオプションで出力するformatを指定することができる
 2. ...残りは同じ
+
+formatの指定方法はgit-for-each-refコマンドを参照
+ref: https://git-scm.com/docs/git-for-each-ref
